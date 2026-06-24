@@ -1,0 +1,58 @@
+{
+  "row_counts": {
+    "raw": 5043,
+    "after_dedup": 4998,
+    "after_dropna": 3722
+  },
+  "paper_row_count": 3737,
+  "row_count_delta_vs_paper": -15,
+  "feature_count": 45,
+  "paper_feature_count": 45,
+  "imbalance_ratios": {
+    "target_imdb_score": {
+      "IR1": 13.244,
+      "IR2": 15.416
+    },
+    "target_content_rating": {
+      "IR1": 31.868,
+      "IR2": 105.562
+    },
+    "target_gross": {
+      "IR1": 1.931,
+      "IR2": 1.931
+    }
+  },
+  "paper_imbalance_ratios": {
+    "target_imdb_score": {
+      "IR1": 13.196,
+      "IR2": 15.395
+    },
+    "target_content_rating": {
+      "IR1": 40.701,
+      "IR2": 105.938
+    },
+    "target_gross": {
+      "IR1": 1.908,
+      "IR2": 1.908
+    }
+  },
+  "target_class_counts": {
+    "target_imdb_score": {
+      "Average": 3222,
+      "Bad": 291,
+      "Good": 209
+    },
+    "target_content_rating": {
+      "R": 1689,
+      "PG-13": 1290,
+      "PG": 584,
+      "G": 87,
+      "Unrated": 56,
+      "NC-17": 16
+    },
+    "target_gross": {
+      "1": 2452,
+      "0": 1270
+    }
+  }
+}

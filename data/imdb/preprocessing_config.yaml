@@ -1,0 +1,140 @@
+raw_path: /Users/ben/Developer/Multi-task-active-learning/raw_data/drive-download-20260618T195026Z-3-001/movie_metadata.csv
+gross_threshold_usd: 15000000
+language_top_k: 4
+country_top_k: 4
+content_rating_remap:
+  Approved: PG
+  Passed: PG
+  GP: PG
+  M: R
+  X: NC-17
+  Not Rated: Unrated
+  TV-14: Unrated
+  TV-MA: Unrated
+  TV-PG: Unrated
+  TV-G: Unrated
+  TV-Y: Unrated
+  TV-Y7: Unrated
+identifier_columns:
+- director_name
+- actor_1_name
+- actor_2_name
+- actor_3_name
+- movie_title
+- movie_imdb_link
+- plot_keywords
+numeric_feature_columns:
+- num_critic_for_reviews
+- duration
+- director_facebook_likes
+- actor_3_facebook_likes
+- actor_1_facebook_likes
+- num_voted_users
+- cast_total_facebook_likes
+- facenumber_in_poster
+- num_user_for_reviews
+- budget
+- title_year
+- actor_2_facebook_likes
+- aspect_ratio
+- movie_facebook_likes
+imdb_score_bins:
+  Bad: 0 <= score < 5
+  Average: 5 <= score < 8
+  Good: 8 <= score < 10
+genre_columns:
+- genre__Drama
+- genre__Comedy
+- genre__Thriller
+- genre__Action
+- genre__Romance
+- genre__Adventure
+- genre__Crime
+- genre__Fantasy
+- genre__Sci-Fi
+- genre__Family
+- genre__Horror
+- genre__Mystery
+- genre__Biography
+- genre__Animation
+- genre__War
+- genre__Music
+- genre__History
+- genre__Sport
+- genre__Musical
+- genre__Western
+- genre__Documentary
+- genre__Film-Noir
+feature_column_names:
+- num_critic_for_reviews
+- duration
+- director_facebook_likes
+- actor_3_facebook_likes
+- actor_1_facebook_likes
+- num_voted_users
+- cast_total_facebook_likes
+- facenumber_in_poster
+- num_user_for_reviews
+- budget
+- title_year
+- actor_2_facebook_likes
+- aspect_ratio
+- movie_facebook_likes
+- color_is_color
+- language__English
+- language__French
+- language__Spanish
+- language__Mandarin
+- country__USA
+- country__UK
+- country__France
+- country__Germany
+- genre__Drama
+- genre__Comedy
+- genre__Thriller
+- genre__Action
+- genre__Romance
+- genre__Adventure
+- genre__Crime
+- genre__Fantasy
+- genre__Sci-Fi
+- genre__Family
+- genre__Horror
+- genre__Mystery
+- genre__Biography
+- genre__Animation
+- genre__War
+- genre__Music
+- genre__History
+- genre__Sport
+- genre__Musical
+- genre__Western
+- genre__Documentary
+- genre__Film-Noir
+language_onehot_columns:
+- language__English
+- language__French
+- language__Spanish
+- language__Mandarin
+country_onehot_columns:
+- country__USA
+- country__UK
+- country__France
+- country__Germany
+language_top_values:
+- English
+- French
+- Spanish
+- Mandarin
+country_top_values:
+- USA
+- UK
+- France
+- Germany
+target_columns:
+- target_imdb_score
+- target_content_rating
+- target_gross
+paper_targets:
+  row_count: 3737
+  feature_count: 45
