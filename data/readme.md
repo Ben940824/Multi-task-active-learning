@@ -7,6 +7,8 @@
 | `imdb/combined.parquet` / `combined.csv` | features + targets (48 columns) |
 | `imdb/preprocessing_config.yaml` | preprocessing decisions and column lists |
 | `imdb/preprocessing_report.json` | row counts, IR vs paper |
+| `imdb/split.json` | train / test / pool row indices |
+| `imdb/split_report.json` | subset sizes and target class counts |
 
 Each table is saved in both Parquet (for training scripts) and CSV (for manual inspection).
 

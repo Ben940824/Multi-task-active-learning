@@ -1,0 +1,68 @@
+{
+  "random_state": 42,
+  "stratified": false,
+  "n_total": 3722,
+  "sizes": {
+    "train": 100,
+    "test": 1000,
+    "pool": 2622
+  },
+  "target_distribution": {
+    "train": {
+      "target_imdb_score": {
+        "Average": 83,
+        "Bad": 12,
+        "Good": 5
+      },
+      "target_content_rating": {
+        "G": 1,
+        "PG": 18,
+        "PG-13": 40,
+        "R": 39,
+        "Unrated": 2
+      },
+      "target_gross": {
+        "0": 38,
+        "1": 62
+      }
+    },
+    "test": {
+      "target_imdb_score": {
+        "Average": 862,
+        "Bad": 83,
+        "Good": 55
+      },
+      "target_content_rating": {
+        "G": 24,
+        "NC-17": 4,
+        "PG": 165,
+        "PG-13": 341,
+        "R": 450,
+        "Unrated": 16
+      },
+      "target_gross": {
+        "0": 344,
+        "1": 656
+      }
+    },
+    "pool": {
+      "target_imdb_score": {
+        "Average": 2277,
+        "Bad": 196,
+        "Good": 149
+      },
+      "target_content_rating": {
+        "G": 62,
+        "NC-17": 12,
+        "PG": 401,
+        "PG-13": 909,
+        "R": 1200,
+        "Unrated": 38
+      },
+      "target_gross": {
+        "0": 888,
+        "1": 1734
+      }
+    }
+  }
+}
