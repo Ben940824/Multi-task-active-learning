@@ -21,6 +21,12 @@ from multitask_al.eval.plots import plot_all_metrics  # noqa: E402
 DEFAULT_METRICS = REPO_ROOT / "outputs" / "imdb_baseline" / "metrics.csv"
 DEFAULT_OUTPUT = REPO_ROOT / "outputs" / "imdb_baseline"
 
+IMDB_TARGET_LABELS = {
+    "target_imdb_score": "IMDb Score",
+    "target_content_rating": "Content Rating",
+    "target_gross": "Gross",
+}
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Plot AL curves from metrics.csv")
@@ -31,7 +37,12 @@ def main() -> None:
     import pandas as pd
 
     metrics = pd.read_csv(args.metrics)
-    paths = plot_all_metrics(metrics, args.output_dir)
+    paths = plot_all_metrics(
+        metrics,
+        args.output_dir,
+        title="IMDB Baseline Active Learning",
+        target_labels=IMDB_TARGET_LABELS,
+    )
     for p in paths:
         print(f"Wrote {p}")
 

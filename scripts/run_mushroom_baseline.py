@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 """
-Run IMDB single-output baseline active learning (paper Algorithm 1).
+Run Mushroom single-output baseline active learning (paper Algorithm 1).
 
 Usage (from repo root):
-    .venv/bin/python scripts/run_imdb_baseline.py
+    .venv/bin/python scripts/split_mushroom.py
+    .venv/bin/python scripts/run_mushroom_baseline.py
 
 Requires:
-    data/imdb/features.parquet (or .csv)
-    data/imdb/targets.parquet  (or .csv)
-    data/imdb/split.json
+    data/mushroom/features.parquet (or .csv)
+    data/mushroom/targets.parquet  (or .csv)
+    data/mushroom/split.json
 
 Outputs:
-    outputs/imdb_baseline/metrics.csv
-    outputs/imdb_baseline/run_config.json
-    outputs/imdb_baseline/f1_by_target.png
-    outputs/imdb_baseline/f1_combined.png
-    outputs/imdb_baseline/accuracy_by_target.png
+    outputs/mushroom_baseline/metrics.csv
+    outputs/mushroom_baseline/run_config.json
+    outputs/mushroom_baseline/f1_by_target.png
+    outputs/mushroom_baseline/f1_combined.png
+    outputs/mushroom_baseline/accuracy_by_target.png
 """
 
 from __future__ import annotations
@@ -32,22 +33,22 @@ from multitask_al.active_learning.loop import (  # noqa: E402
     run_baseline_active_learning,
 )
 from multitask_al.data.split import load_split  # noqa: E402
-from multitask_al.preprocess.imdb import TARGET_COLUMNS  # noqa: E402
+from multitask_al.preprocess.mushroom import TARGET_COLUMNS  # noqa: E402
 
-IMDB_TARGET_LABELS = {
-    "target_imdb_score": "IMDb Score",
-    "target_content_rating": "Content Rating",
-    "target_gross": "Gross",
+DEFAULT_DATA_DIR = REPO_ROOT / "data" / "mushroom"
+DEFAULT_OUTPUT_DIR = REPO_ROOT / "outputs" / "mushroom_baseline"
+
+MUSHROOM_TARGET_LABELS = {
+    "target_class": "Class",
+    "target_population": "Population",
+    "target_habitat": "Habitat",
 }
 
 PAPER_BASELINE_F1 = {
-    "target_imdb_score": 0.48,
-    "target_content_rating": 0.554,
-    "target_gross": 0.688,
+    "target_class": 1.0,
+    "target_population": 0.484,
+    "target_habitat": 0.581,
 }
-
-DEFAULT_DATA_DIR = REPO_ROOT / "data" / "imdb"
-DEFAULT_OUTPUT_DIR = REPO_ROOT / "outputs" / "imdb_baseline"
 
 
 def _load_frame(data_dir: Path, name: str):
@@ -64,7 +65,7 @@ def _load_frame(data_dir: Path, name: str):
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="IMDB single-output baseline active learning"
+        description="Mushroom single-output baseline active learning"
     )
     parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA_DIR)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
@@ -96,8 +97,8 @@ def main() -> None:
     out = save_run(
         run,
         args.output_dir,
-        plot_title="IMDB Baseline Active Learning",
-        target_labels=IMDB_TARGET_LABELS,
+        plot_title="Mushroom Baseline Active Learning",
+        target_labels=MUSHROOM_TARGET_LABELS,
     )
     print(f"\nWrote {out / 'metrics.csv'}")
     print(f"Wrote {out / 'run_config.json'}")
@@ -105,7 +106,6 @@ def main() -> None:
     print(f"Wrote {out / 'f1_combined.png'}")
     print(f"Wrote {out / 'accuracy_by_target.png'}")
 
-    # Print step 0 and final step F1 for quick comparison with paper.
     s0 = run.steps[0]
     sf = run.steps[-1]
     print("\nMacro-F1 (step 0 -> step {}):".format(sf.step))
@@ -113,7 +113,7 @@ def main() -> None:
         s0_f1 = s0.per_target[target]["f1_macro"]
         sf_f1 = sf.per_target[target]["f1_macro"]
         paper_f1 = PAPER_BASELINE_F1[target]
-        label = IMDB_TARGET_LABELS[target]
+        label = MUSHROOM_TARGET_LABELS[target]
         print(f"  {label:22s}  {s0_f1:.3f} -> {sf_f1:.3f}  (paper baseline ~{paper_f1})")
 
 

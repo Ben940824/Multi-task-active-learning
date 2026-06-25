@@ -1,0 +1,78 @@
+{
+  "random_state": 42,
+  "stratified": false,
+  "n_total": 5644,
+  "sizes": {
+    "train": 100,
+    "test": 1000,
+    "pool": 4544
+  },
+  "target_distribution": {
+    "train": {
+      "target_class": {
+        "e": 63,
+        "p": 37
+      },
+      "target_population": {
+        "a": 3,
+        "c": 1,
+        "n": 6,
+        "s": 20,
+        "v": 37,
+        "y": 33
+      },
+      "target_habitat": {
+        "d": 40,
+        "g": 31,
+        "l": 1,
+        "m": 12,
+        "p": 13,
+        "u": 3
+      }
+    },
+    "test": {
+      "target_class": {
+        "e": 624,
+        "p": 376
+      },
+      "target_population": {
+        "a": 67,
+        "c": 19,
+        "n": 51,
+        "s": 201,
+        "v": 361,
+        "y": 301
+      },
+      "target_habitat": {
+        "d": 437,
+        "g": 334,
+        "l": 14,
+        "m": 49,
+        "p": 97,
+        "u": 69
+      }
+    },
+    "pool": {
+      "target_class": {
+        "e": 2801,
+        "p": 1743
+      },
+      "target_population": {
+        "a": 314,
+        "c": 32,
+        "n": 199,
+        "s": 883,
+        "v": 1762,
+        "y": 1354
+      },
+      "target_habitat": {
+        "d": 2015,
+        "g": 1495,
+        "l": 49,
+        "m": 231,
+        "p": 458,
+        "u": 296
+      }
+    }
+  }
+}

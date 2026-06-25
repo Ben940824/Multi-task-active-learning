@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import json
-from dataclasses import asdict, dataclass, field
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
@@ -14,7 +14,6 @@ from multitask_al.data.split import DatasetSplit
 from multitask_al.eval.metrics import classification_metrics
 from multitask_al.eval.plots import plot_all_metrics
 from multitask_al.models.rf_single_output import SingleOutputRFModels
-from multitask_al.preprocess.imdb import TARGET_COLUMNS
 
 DEFAULT_N_STEPS = 20
 DEFAULT_M_PER_TARGET = 15
@@ -29,12 +28,7 @@ class StepMetrics:
     n_train: int
     n_pool: int
     n_queried: int
-    target_imdb_score_accuracy: float
-    target_imdb_score_f1_macro: float
-    target_content_rating_accuracy: float
-    target_content_rating_f1_macro: float
-    target_gross_accuracy: float
-    target_gross_f1_macro: float
+    per_target: dict[str, dict[str, float]] = field(default_factory=dict)
 
 
 @dataclass
@@ -43,6 +37,7 @@ class ActiveLearningRun:
 
     steps: list[StepMetrics] = field(default_factory=list)
     config: dict[str, Any] = field(default_factory=dict)
+    target_columns: list[str] = field(default_factory=list)
 
 
 def _evaluate(
@@ -70,12 +65,7 @@ def _metrics_row(
         n_train=n_train,
         n_pool=n_pool,
         n_queried=n_queried,
-        target_imdb_score_accuracy=evals["target_imdb_score"]["accuracy"],
-        target_imdb_score_f1_macro=evals["target_imdb_score"]["f1_macro"],
-        target_content_rating_accuracy=evals["target_content_rating"]["accuracy"],
-        target_content_rating_f1_macro=evals["target_content_rating"]["f1_macro"],
-        target_gross_accuracy=evals["target_gross"]["accuracy"],
-        target_gross_f1_macro=evals["target_gross"]["f1_macro"],
+        per_target=evals,
     )
 
 
@@ -83,7 +73,7 @@ def run_baseline_active_learning(
     features: pd.DataFrame,
     targets: pd.DataFrame,
     split: DatasetSplit,
-    target_columns: list[str] | None = None,
+    target_columns: list[str],
     n_steps: int = DEFAULT_N_STEPS,
     m_per_target: int = DEFAULT_M_PER_TARGET,
     query_budget: int = DEFAULT_QUERY_BUDGET,
@@ -96,8 +86,6 @@ def run_baseline_active_learning(
       train 3 independent RF on D_train -> eval D_test -> query m_per_target
       least-confident pool rows per target -> move queried rows train -> pool
     """
-    target_columns = target_columns or list(TARGET_COLUMNS)
-
     train_indices = list(split.train_indices)
     pool_indices = list(split.pool_indices)
     test_indices = split.test_indices
@@ -113,14 +101,16 @@ def run_baseline_active_learning(
     models = SingleOutputRFModels(target_columns=target_columns, rf_kwargs=rf_kwargs)
 
     run = ActiveLearningRun(
+        target_columns=target_columns,
         config={
+            "target_columns": target_columns,
             "n_steps": n_steps,
             "m_per_target": m_per_target,
             "query_budget": query_budget,
             "rf_random_state": rf_random_state,
             "sampling": None,
             "split_random_state": split.random_state,
-        }
+        },
     )
 
     for step in range(n_steps + 1):
@@ -163,10 +153,27 @@ def run_baseline_active_learning(
 
 def steps_to_dataframe(run: ActiveLearningRun) -> pd.DataFrame:
     """Convert step metrics to a flat table for CSV export."""
-    return pd.DataFrame([asdict(s) for s in run.steps])
+    rows: list[dict[str, Any]] = []
+    for step in run.steps:
+        row: dict[str, Any] = {
+            "step": step.step,
+            "n_train": step.n_train,
+            "n_pool": step.n_pool,
+            "n_queried": step.n_queried,
+        }
+        for target, metrics in step.per_target.items():
+            row[f"{target}_accuracy"] = metrics["accuracy"]
+            row[f"{target}_f1_macro"] = metrics["f1_macro"]
+        rows.append(row)
+    return pd.DataFrame(rows)
 
 
-def save_run(run: ActiveLearningRun, output_dir: Path | str) -> Path:
+def save_run(
+    run: ActiveLearningRun,
+    output_dir: Path | str,
+    plot_title: str = "Baseline Active Learning",
+    target_labels: dict[str, str] | None = None,
+) -> Path:
     """Write metrics CSV, run config JSON, and curve plots."""
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -176,6 +183,11 @@ def save_run(run: ActiveLearningRun, output_dir: Path | str) -> Path:
     with open(output_dir / "run_config.json", "w", encoding="utf-8") as f:
         json.dump(run.config, f, indent=2)
 
-    plot_all_metrics(df, output_dir)
+    plot_all_metrics(
+        df,
+        output_dir,
+        title=plot_title,
+        target_labels=target_labels,
+    )
 
     return output_dir

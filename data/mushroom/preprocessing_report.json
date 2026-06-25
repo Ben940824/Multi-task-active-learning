@@ -1,0 +1,63 @@
+{
+  "row_counts": {
+    "raw": 8124,
+    "after_dedup": 8124,
+    "after_dropna": 5644
+  },
+  "paper_row_count": 5644,
+  "row_count_delta_vs_paper": 0,
+  "feature_count": 20,
+  "paper_feature_count": 20,
+  "paper_total_column_count": 23,
+  "combined_column_count": 23,
+  "imbalance_ratios": {
+    "target_class": {
+      "IR1": 1.618,
+      "IR2": 1.618
+    },
+    "target_population": {
+      "IR1": 11.767,
+      "IR2": 41.538
+    },
+    "target_habitat": {
+      "IR1": 11.994,
+      "IR2": 38.938
+    }
+  },
+  "paper_imbalance_ratios": {
+    "target_class": {
+      "IR1": 1.618,
+      "IR2": 1.618
+    },
+    "target_population": {
+      "IR1": 11.767,
+      "IR2": 41.538
+    },
+    "target_habitat": {
+      "IR1": 11.994,
+      "IR2": 38.938
+    }
+  },
+  "target_class_counts": {
+    "target_class": {
+      "e": 3488,
+      "p": 2156
+    },
+    "target_population": {
+      "v": 2160,
+      "y": 1688,
+      "s": 1104,
+      "a": 384,
+      "n": 256,
+      "c": 52
+    },
+    "target_habitat": {
+      "d": 2492,
+      "g": 1860,
+      "p": 568,
+      "u": 368,
+      "m": 292,
+      "l": 64
+    }
+  }
+}
