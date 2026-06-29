@@ -1,0 +1,40 @@
+raw_path: /Users/ben/Developer/Multi-task-active-learning/raw_data/drive-download-20260618T195026Z-3-001/Frogs_MFCCs.csv
+identifier_columns:
+- RecordID
+target_columns:
+- target_family
+- target_genus
+- target_species
+notes:
+- Drop RecordID (unique identifier per paper).
+feature_column_names:
+- MFCCs_ 1
+- MFCCs_ 2
+- MFCCs_ 3
+- MFCCs_ 4
+- MFCCs_ 5
+- MFCCs_ 6
+- MFCCs_ 7
+- MFCCs_ 8
+- MFCCs_ 9
+- MFCCs_10
+- MFCCs_11
+- MFCCs_12
+- MFCCs_13
+- MFCCs_14
+- MFCCs_15
+- MFCCs_16
+- MFCCs_17
+- MFCCs_18
+- MFCCs_19
+- MFCCs_20
+- MFCCs_21
+- MFCCs_22
+raw_to_target:
+  Family: target_family
+  Genus: target_genus
+  Species: target_species
+paper_targets:
+  row_count: 7195
+  total_column_count: 25
+  feature_count: 22

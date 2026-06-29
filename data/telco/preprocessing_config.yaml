@@ -1,0 +1,101 @@
+raw_path: /Users/ben/Developer/Multi-task-active-learning/raw_data/drive-download-20260618T195026Z-3-001/telco.csv
+feature_columns:
+- SeniorCitizen
+- tenure
+- MonthlyCharges
+- TotalCharges
+- gender
+- Partner
+- Dependents
+- PhoneService
+- MultipleLines
+- InternetService
+- OnlineSecurity
+- OnlineBackup
+- DeviceProtection
+- TechSupport
+- StreamingTV
+- StreamingMovies
+- PaperlessBilling
+target_columns:
+- target_churn
+- target_contract
+- target_payment
+label_encodings:
+  gender:
+    Female: 0
+    Male: 1
+  Partner:
+    'No': 0
+    'Yes': 1
+  Dependents:
+    'No': 0
+    'Yes': 1
+  PhoneService:
+    'No': 0
+    'Yes': 1
+  MultipleLines:
+    'No': 0
+    No phone service: 1
+    'Yes': 2
+  InternetService:
+    DSL: 0
+    Fiber optic: 1
+    'No': 2
+  OnlineSecurity:
+    'No': 0
+    No internet service: 1
+    'Yes': 2
+  OnlineBackup:
+    'No': 0
+    No internet service: 1
+    'Yes': 2
+  DeviceProtection:
+    'No': 0
+    No internet service: 1
+    'Yes': 2
+  TechSupport:
+    'No': 0
+    No internet service: 1
+    'Yes': 2
+  StreamingTV:
+    'No': 0
+    No internet service: 1
+    'Yes': 2
+  StreamingMovies:
+    'No': 0
+    No internet service: 1
+    'Yes': 2
+  PaperlessBilling:
+    'No': 0
+    'Yes': 1
+notes:
+- Drop customerID (unique identifier).
+- Paper row count matches drop_duplicates without dropping blank TotalCharges.
+- TotalCharges coerced to numeric; blank strings become NaN but rows kept.
+feature_column_names:
+- SeniorCitizen
+- tenure
+- MonthlyCharges
+- TotalCharges
+- gender
+- Partner
+- Dependents
+- PhoneService
+- MultipleLines
+- InternetService
+- OnlineSecurity
+- OnlineBackup
+- DeviceProtection
+- TechSupport
+- StreamingTV
+- StreamingMovies
+- PaperlessBilling
+raw_to_target:
+  Churn: target_churn
+  Contract: target_contract
+  PaymentMethod: target_payment
+paper_targets:
+  row_count: 7021
+  total_column_count: 20
+  feature_count: 17

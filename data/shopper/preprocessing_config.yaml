@@ -1,0 +1,77 @@
+raw_path: /Users/ben/Developer/Multi-task-active-learning/raw_data/drive-download-20260618T195026Z-3-001/online_shoppers_intention.csv
+feature_columns:
+- Administrative
+- Administrative_Duration
+- Informational
+- Informational_Duration
+- ProductRelated
+- ProductRelated_Duration
+- BounceRates
+- ExitRates
+- PageValues
+- OperatingSystems
+- Region
+- TrafficType
+- Month
+- Weekend
+- Browser
+target_columns:
+- target_revenue
+- target_visitor_type
+- target_special_day
+label_encodings:
+  Month:
+    Aug: 0
+    Dec: 1
+    Feb: 2
+    Jul: 3
+    June: 4
+    Mar: 5
+    May: 6
+    Nov: 7
+    Oct: 8
+    Sep: 9
+  Weekend:
+    'False': 0
+    'True': 1
+  Browser:
+    '1': 0
+    '10': 1
+    '11': 2
+    '12': 3
+    '13': 4
+    '2': 5
+    '3': 6
+    '4': 7
+    '5': 8
+    '6': 9
+    '7': 10
+    '8': 11
+    '9': 12
+notes:
+- 'Paper: remove VisitorType==''Other'' (typo: ''Bank Intention'' in report).'
+- SpecialDay kept as numeric target; excluded from features.
+feature_column_names:
+- Administrative
+- Administrative_Duration
+- Informational
+- Informational_Duration
+- ProductRelated
+- ProductRelated_Duration
+- BounceRates
+- ExitRates
+- PageValues
+- OperatingSystems
+- Region
+- TrafficType
+- Month
+- Weekend
+- Browser
+raw_to_target:
+  Revenue: target_revenue
+  VisitorType: target_visitor_type
+  SpecialDay: target_special_day
+paper_targets:
+  row_count: 12124
+  total_column_count: 18
+  feature_count: 15

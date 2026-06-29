@@ -1,0 +1,13 @@
+{
+  "target_columns": [
+    "target_income",
+    "target_marital_status",
+    "target_workclass"
+  ],
+  "n_steps": 20,
+  "m_per_target": 15,
+  "query_budget": 45,
+  "rf_random_state": 42,
+  "sampling": null,
+  "split_random_state": 42
+}

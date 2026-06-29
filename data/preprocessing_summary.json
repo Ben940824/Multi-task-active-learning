@@ -1,0 +1,222 @@
+{
+  "anuran": {
+    "rows_ours": 7195,
+    "rows_paper": 7195,
+    "row_delta": 0,
+    "features_ours": 22,
+    "features_paper": 22,
+    "ir_match": true,
+    "imbalance_ratios": {
+      "target_family": {
+        "IR1": 25.066,
+        "IR2": 65.0
+      },
+      "target_genus": {
+        "IR1": 23.499,
+        "IR2": 61.029
+      },
+      "target_species": {
+        "IR1": 16.813,
+        "IR2": 51.147
+      }
+    }
+  },
+  "bank": {
+    "rows_ours": 3090,
+    "rows_paper": 3090,
+    "row_delta": 0,
+    "features_ours": 18,
+    "features_paper": 18,
+    "ir_match": true,
+    "imbalance_ratios": {
+      "target_campaign": {
+        "IR1": 7.351,
+        "IR2": 7.351
+      },
+      "target_personal_loan": {
+        "IR1": 5.095,
+        "IR2": 5.095
+      },
+      "target_housing_loan": {
+        "IR1": 1.204,
+        "IR2": 1.204
+      }
+    }
+  },
+  "census": {
+    "rows_ours": 45194,
+    "rows_paper": 45194,
+    "row_delta": 0,
+    "features_ours": 12,
+    "features_paper": 12,
+    "ir_match": true,
+    "imbalance_ratios": {
+      "target_income": {
+        "IR1": 3.033,
+        "IR2": 3.033
+      },
+      "target_marital_status": {
+        "IR1": 122.011,
+        "IR2": 657.75
+      },
+      "target_workclass": {
+        "IR1": 277.553,
+        "IR2": 1584.81
+      }
+    }
+  },
+  "flight": {
+    "rows_ours": 129487,
+    "rows_paper": 129487,
+    "row_delta": 0,
+    "features_ours": 20,
+    "features_paper": 20,
+    "ir_match": true,
+    "imbalance_ratios": {
+      "target_satisfaction": {
+        "IR1": 1.302,
+        "IR2": 1.302
+      },
+      "target_customer_type": {
+        "IR1": 4.46,
+        "IR2": 4.46
+      },
+      "target_class": {
+        "IR1": 3.838,
+        "IR2": 6.609
+      }
+    }
+  },
+  "imdb": {
+    "rows_ours": 3722,
+    "rows_paper": 3737,
+    "row_delta": -15,
+    "features_ours": 45,
+    "features_paper": 45,
+    "ir_match": false,
+    "imbalance_ratios": {
+      "target_imdb_score": {
+        "IR1": 13.244,
+        "IR2": 15.416
+      },
+      "target_content_rating": {
+        "IR1": 31.868,
+        "IR2": 105.562
+      },
+      "target_gross": {
+        "IR1": 1.931,
+        "IR2": 1.931
+      }
+    }
+  },
+  "mushroom": {
+    "rows_ours": 5644,
+    "rows_paper": 5644,
+    "row_delta": 0,
+    "features_ours": 20,
+    "features_paper": 20,
+    "ir_match": true,
+    "imbalance_ratios": {
+      "target_class": {
+        "IR1": 1.618,
+        "IR2": 1.618
+      },
+      "target_population": {
+        "IR1": 11.767,
+        "IR2": 41.538
+      },
+      "target_habitat": {
+        "IR1": 11.994,
+        "IR2": 38.938
+      }
+    }
+  },
+  "paris": {
+    "rows_ours": 10000,
+    "rows_paper": 10000,
+    "row_delta": 0,
+    "features_ours": 13,
+    "features_paper": 13,
+    "ir_match": true,
+    "imbalance_ratios": {
+      "target_category": {
+        "IR1": 6.905,
+        "IR2": 6.905
+      },
+      "target_new_built": {
+        "IR1": 1.004,
+        "IR2": 1.004
+      },
+      "target_storage_room": {
+        "IR1": 1.012,
+        "IR2": 1.012
+      }
+    }
+  },
+  "shopper": {
+    "rows_ours": 12124,
+    "rows_paper": 12124,
+    "row_delta": 0,
+    "features_ours": 15,
+    "features_paper": 15,
+    "ir_match": true,
+    "imbalance_ratios": {
+      "target_revenue": {
+        "IR1": 5.408,
+        "IR2": 5.408
+      },
+      "target_visitor_type": {
+        "IR1": 6.161,
+        "IR2": 6.161
+      },
+      "target_special_day": {
+        "IR1": 48.22,
+        "IR2": 70.617
+      }
+    }
+  },
+  "smoking": {
+    "rows_ours": 44552,
+    "rows_paper": 44552,
+    "row_delta": 0,
+    "features_ours": 22,
+    "features_paper": 22,
+    "ir_match": true,
+    "imbalance_ratios": {
+      "target_smoking": {
+        "IR1": 1.725,
+        "IR2": 1.725
+      },
+      "target_tartar": {
+        "IR1": 1.251,
+        "IR2": 1.251
+      },
+      "target_dental_caries": {
+        "IR1": 3.683,
+        "IR2": 3.683
+      }
+    }
+  },
+  "telco": {
+    "rows_ours": 7021,
+    "rows_paper": 7021,
+    "row_delta": 0,
+    "features_ours": 17,
+    "features_paper": 17,
+    "ir_match": true,
+    "imbalance_ratios": {
+      "target_churn": {
+        "IR1": 2.781,
+        "IR2": 2.781
+      },
+      "target_contract": {
+        "IR1": 2.444,
+        "IR2": 2.616
+      },
+      "target_payment": {
+        "IR1": 1.519,
+        "IR2": 1.55
+      }
+    }
+  }
+}

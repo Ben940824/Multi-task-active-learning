@@ -1,0 +1,56 @@
+{
+  "row_counts": {
+    "raw": 4119,
+    "after_drop_unknown": 3090,
+    "after_dedup": 3090,
+    "final": 3090
+  },
+  "paper_row_count": 3090,
+  "row_count_delta_vs_paper": 0,
+  "feature_count": 18,
+  "paper_feature_count": 18,
+  "paper_total_column_count": 21,
+  "combined_column_count": 21,
+  "imbalance_ratios": {
+    "target_campaign": {
+      "IR1": 7.351,
+      "IR2": 7.351
+    },
+    "target_personal_loan": {
+      "IR1": 5.095,
+      "IR2": 5.095
+    },
+    "target_housing_loan": {
+      "IR1": 1.204,
+      "IR2": 1.204
+    }
+  },
+  "paper_imbalance_ratios": {
+    "target_campaign": {
+      "IR1": 7.351,
+      "IR2": 7.351
+    },
+    "target_personal_loan": {
+      "IR1": 5.095,
+      "IR2": 5.095
+    },
+    "target_housing_loan": {
+      "IR1": 1.204,
+      "IR2": 1.204
+    }
+  },
+  "target_class_counts": {
+    "target_campaign": {
+      "no": 2720,
+      "yes": 370
+    },
+    "target_personal_loan": {
+      "no": 2583,
+      "yes": 507
+    },
+    "target_housing_loan": {
+      "yes": 1688,
+      "no": 1402
+    }
+  }
+}

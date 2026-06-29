@@ -1,0 +1,57 @@
+{
+  "row_counts": {
+    "raw": 7043,
+    "final": 7021
+  },
+  "paper_row_count": 7021,
+  "row_count_delta_vs_paper": 0,
+  "feature_count": 17,
+  "paper_feature_count": 17,
+  "paper_total_column_count": 20,
+  "combined_column_count": 20,
+  "imbalance_ratios": {
+    "target_churn": {
+      "IR1": 2.781,
+      "IR2": 2.781
+    },
+    "target_contract": {
+      "IR1": 2.444,
+      "IR2": 2.616
+    },
+    "target_payment": {
+      "IR1": 1.519,
+      "IR2": 1.55
+    }
+  },
+  "paper_imbalance_ratios": {
+    "target_churn": {
+      "IR1": 2.781,
+      "IR2": 2.781
+    },
+    "target_contract": {
+      "IR1": 2.444,
+      "IR2": 2.616
+    },
+    "target_payment": {
+      "IR1": 1.519,
+      "IR2": 1.55
+    }
+  },
+  "target_class_counts": {
+    "target_churn": {
+      "No": 5164,
+      "Yes": 1857
+    },
+    "target_contract": {
+      "Month-to-month": 3853,
+      "Two year": 1695,
+      "One year": 1473
+    },
+    "target_payment": {
+      "Electronic check": 2359,
+      "Mailed check": 1596,
+      "Bank transfer (automatic)": 1544,
+      "Credit card (automatic)": 1522
+    }
+  }
+}

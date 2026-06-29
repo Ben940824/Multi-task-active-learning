@@ -1,0 +1,106 @@
+raw_path: /Users/ben/Developer/Multi-task-active-learning/raw_data/drive-download-20260618T195026Z-3-001/bank-additional.csv
+feature_columns:
+- age
+- duration
+- campaign
+- pdays
+- previous
+- emp.var.rate
+- cons.price.idx
+- cons.conf.idx
+- euribor3m
+- nr.employed
+- job
+- marital
+- education
+- default
+- contact
+- month
+- day_of_week
+- poutcome
+target_columns:
+- target_campaign
+- target_personal_loan
+- target_housing_loan
+label_encodings:
+  job:
+    admin.: 0
+    blue-collar: 1
+    entrepreneur: 2
+    housemaid: 3
+    management: 4
+    retired: 5
+    self-employed: 6
+    services: 7
+    student: 8
+    technician: 9
+    unemployed: 10
+  marital:
+    divorced: 0
+    married: 1
+    single: 2
+  education:
+    basic.4y: 0
+    basic.6y: 1
+    basic.9y: 2
+    high.school: 3
+    illiterate: 4
+    professional.course: 5
+    university.degree: 6
+  default:
+    'no': 0
+    'yes': 1
+  contact:
+    cellular: 0
+    telephone: 1
+  month:
+    apr: 0
+    aug: 1
+    dec: 2
+    jul: 3
+    jun: 4
+    mar: 5
+    may: 6
+    nov: 7
+    oct: 8
+    sep: 9
+  day_of_week:
+    fri: 0
+    mon: 1
+    thu: 2
+    tue: 3
+    wed: 4
+  poutcome:
+    failure: 0
+    nonexistent: 1
+    success: 2
+notes:
+- Drop rows where any categorical field is 'unknown' (UCI convention).
+- Paper Target = y (term deposit subscription).
+feature_column_names:
+- age
+- duration
+- campaign
+- pdays
+- previous
+- emp.var.rate
+- cons.price.idx
+- cons.conf.idx
+- euribor3m
+- nr.employed
+- job
+- marital
+- education
+- default
+- contact
+- month
+- day_of_week
+- poutcome
+raw_to_target:
+  y: target_campaign
+  loan: target_personal_loan
+  housing: target_housing_loan
+paper_targets:
+  row_count: 3090
+  total_column_count: 21
+  feature_count: 18

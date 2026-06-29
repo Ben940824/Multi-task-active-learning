@@ -1,0 +1,64 @@
+raw_path: /Users/ben/Developer/Multi-task-active-learning/raw_data/drive-download-20260618T195026Z-3-001/flight.csv
+feature_columns:
+- Age
+- Flight Distance
+- Inflight wifi service
+- Departure/Arrival time convenient
+- Ease of Online booking
+- Gate location
+- Food and drink
+- Online boarding
+- Seat comfort
+- Inflight entertainment
+- On-board service
+- Leg room service
+- Baggage handling
+- Checkin service
+- Inflight service
+- Cleanliness
+- Departure Delay in Minutes
+- Arrival Delay in Minutes
+- Gender
+- Type of Travel
+target_columns:
+- target_satisfaction
+- target_customer_type
+- target_class
+label_encodings:
+  Gender:
+    Female: 0
+    Male: 1
+  Type of Travel:
+    Business travel: 0
+    Personal Travel: 1
+notes:
+- 'Standard clean: dedup + dropna (393 rows missing Arrival Delay).'
+feature_column_names:
+- Age
+- Flight Distance
+- Inflight wifi service
+- Departure/Arrival time convenient
+- Ease of Online booking
+- Gate location
+- Food and drink
+- Online boarding
+- Seat comfort
+- Inflight entertainment
+- On-board service
+- Leg room service
+- Baggage handling
+- Checkin service
+- Inflight service
+- Cleanliness
+- Departure Delay in Minutes
+- Arrival Delay in Minutes
+- Gender
+- Type of Travel
+raw_to_target:
+  satisfaction: target_satisfaction
+  Customer Type: target_customer_type
+  Class: target_class
+paper_targets:
+  row_count: 129487
+  total_column_count: 23
+  feature_count: 20

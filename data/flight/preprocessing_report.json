@@ -1,0 +1,56 @@
+{
+  "row_counts": {
+    "raw": 129880,
+    "after_dedup": 129880,
+    "final": 129487
+  },
+  "paper_row_count": 129487,
+  "row_count_delta_vs_paper": 0,
+  "feature_count": 20,
+  "paper_feature_count": 20,
+  "paper_total_column_count": 23,
+  "combined_column_count": 23,
+  "imbalance_ratios": {
+    "target_satisfaction": {
+      "IR1": 1.302,
+      "IR2": 1.302
+    },
+    "target_customer_type": {
+      "IR1": 4.46,
+      "IR2": 4.46
+    },
+    "target_class": {
+      "IR1": 3.838,
+      "IR2": 6.609
+    }
+  },
+  "paper_imbalance_ratios": {
+    "target_satisfaction": {
+      "IR1": 1.302,
+      "IR2": 1.302
+    },
+    "target_customer_type": {
+      "IR1": 4.46,
+      "IR2": 4.46
+    },
+    "target_class": {
+      "IR1": 3.838,
+      "IR2": 6.609
+    }
+  },
+  "target_class_counts": {
+    "target_satisfaction": {
+      "neutral or dissatisfied": 73225,
+      "satisfied": 56262
+    },
+    "target_customer_type": {
+      "Loyal Customer": 105773,
+      "disloyal Customer": 23714
+    },
+    "target_class": {
+      "Business": 61990,
+      "Eco": 58117,
+      "Eco Plus": 9380
+    }
+  }
+}

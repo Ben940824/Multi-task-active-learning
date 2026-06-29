@@ -1,0 +1,50 @@
+raw_path: /Users/ben/Developer/Multi-task-active-learning/raw_data/drive-download-20260618T195026Z-3-001/ParisHousingClass.csv
+feature_columns:
+- squareMeters
+- numberOfRooms
+- hasYard
+- hasPool
+- floors
+- cityCode
+- cityPartRange
+- numPrevOwners
+- hasStormProtector
+- basement
+- attic
+- garage
+- hasGuestRoom
+target_columns:
+- target_category
+- target_new_built
+- target_storage_room
+dropped_columns:
+- price
+leakage_suppressed_columns:
+- made
+notes:
+- Drop price (not a paper attribute).
+- Paper suppresses 'made' when isNewBuilt is a target (data leakage).
+- Model features exclude 'made'; paper table still counts 17 total columns.
+feature_column_names:
+- squareMeters
+- numberOfRooms
+- hasYard
+- hasPool
+- floors
+- cityCode
+- cityPartRange
+- numPrevOwners
+- hasStormProtector
+- basement
+- attic
+- garage
+- hasGuestRoom
+raw_to_target:
+  category: target_category
+  isNewBuilt: target_new_built
+  hasStorageRoom: target_storage_room
+paper_targets:
+  row_count: 10000
+  total_column_count: 17
+  schema_feature_count: 14
+  model_feature_count: 13

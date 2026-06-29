@@ -1,0 +1,71 @@
+{
+  "row_counts": {
+    "raw": 7195,
+    "after_dedup": 7195,
+    "final": 7195
+  },
+  "paper_row_count": 7195,
+  "row_count_delta_vs_paper": 0,
+  "feature_count": 22,
+  "paper_feature_count": 22,
+  "paper_total_column_count": 25,
+  "combined_column_count": 25,
+  "imbalance_ratios": {
+    "target_family": {
+      "IR1": 25.066,
+      "IR2": 65.0
+    },
+    "target_genus": {
+      "IR1": 23.499,
+      "IR2": 61.029
+    },
+    "target_species": {
+      "IR1": 16.813,
+      "IR2": 51.147
+    }
+  },
+  "paper_imbalance_ratios": {
+    "target_family": {
+      "IR1": 25.066,
+      "IR2": 65.0
+    },
+    "target_genus": {
+      "IR1": 23.499,
+      "IR2": 61.029
+    },
+    "target_species": {
+      "IR1": 16.813,
+      "IR2": 51.147
+    }
+  },
+  "target_class_counts": {
+    "target_family": {
+      "Leptodactylidae": 4420,
+      "Hylidae": 2165,
+      "Dendrobatidae": 542,
+      "Bufonidae": 68
+    },
+    "target_genus": {
+      "Adenomera": 4150,
+      "Hypsiboas": 1593,
+      "Ameerega": 542,
+      "Dendropsophus": 310,
+      "Leptodactylus": 270,
+      "Scinax": 148,
+      "Osteocephalus": 114,
+      "Rhinella": 68
+    },
+    "target_species": {
+      "AdenomeraHylaedactylus": 3478,
+      "HypsiboasCordobae": 1121,
+      "AdenomeraAndre": 672,
+      "Ameeregatrivittata": 542,
+      "HypsiboasCinerascens": 472,
+      "HylaMinuta": 310,
+      "LeptodactylusFuscus": 270,
+      "ScinaxRuber": 148,
+      "OsteocephalusOophagus": 114,
+      "Rhinellagranulosa": 68
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "row_counts": {
+    "raw": 12330,
+    "after_dedup": 12205,
+    "after_dropna": 12205,
+    "final": 12124
+  },
+  "paper_row_count": 12124,
+  "row_count_delta_vs_paper": 0,
+  "feature_count": 15,
+  "paper_feature_count": 15,
+  "paper_total_column_count": 18,
+  "combined_column_count": 18,
+  "imbalance_ratios": {
+    "target_revenue": {
+      "IR1": 5.408,
+      "IR2": 5.408
+    },
+    "target_visitor_type": {
+      "IR1": 6.161,
+      "IR2": 6.161
+    },
+    "target_special_day": {
+      "IR1": 48.22,
+      "IR2": 70.617
+    }
+  },
+  "paper_imbalance_ratios": {
+    "target_revenue": {
+      "IR1": 5.408,
+      "IR2": 5.408
+    },
+    "target_visitor_type": {
+      "IR1": 6.161,
+      "IR2": 6.161
+    },
+    "target_special_day": {
+      "IR1": 48.22,
+      "IR2": 70.617
+    }
+  },
+  "target_class_counts": {
+    "target_revenue": {
+      "False": 10232,
+      "True": 1892
+    },
+    "target_visitor_type": {
+      "Returning_Visitor": 10431,
+      "New_Visitor": 1693
+    },
+    "target_special_day": {
+      "0.0": 10875,
+      "0.6": 350,
+      "0.8": 324,
+      "0.4": 243,
+      "0.2": 178,
+      "1.0": 154
+    }
+  }
+}

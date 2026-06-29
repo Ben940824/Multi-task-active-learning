@@ -1,0 +1,66 @@
+raw_path: /Users/ben/Developer/Multi-task-active-learning/raw_data/drive-download-20260618T195026Z-3-001/smoking.csv
+feature_columns:
+- age
+- height(cm)
+- weight(kg)
+- waist(cm)
+- eyesight(left)
+- eyesight(right)
+- hearing(left)
+- hearing(right)
+- systolic
+- relaxation
+- fasting blood sugar
+- Cholesterol
+- triglyceride
+- HDL
+- LDL
+- hemoglobin
+- Urine protein
+- serum creatinine
+- AST
+- ALT
+- Gtp
+- gender
+target_columns:
+- target_smoking
+- target_tartar
+- target_dental_caries
+label_encodings:
+  gender:
+    F: 0
+    M: 1
+notes:
+- Drop ID (unique identifier) and oral (constant column per paper).
+- Dedup on feature columns only (same features, different targets).
+feature_column_names:
+- age
+- height(cm)
+- weight(kg)
+- waist(cm)
+- eyesight(left)
+- eyesight(right)
+- hearing(left)
+- hearing(right)
+- systolic
+- relaxation
+- fasting blood sugar
+- Cholesterol
+- triglyceride
+- HDL
+- LDL
+- hemoglobin
+- Urine protein
+- serum creatinine
+- AST
+- ALT
+- Gtp
+- gender
+raw_to_target:
+  smoking: target_smoking
+  tartar: target_tartar
+  dental caries: target_dental_caries
+paper_targets:
+  row_count: 44552
+  total_column_count: 25
+  feature_count: 22

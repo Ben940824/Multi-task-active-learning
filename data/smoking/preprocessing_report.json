@@ -1,0 +1,54 @@
+{
+  "row_counts": {
+    "raw": 55692,
+    "final": 44552
+  },
+  "paper_row_count": 44552,
+  "row_count_delta_vs_paper": 0,
+  "feature_count": 22,
+  "paper_feature_count": 22,
+  "paper_total_column_count": 25,
+  "combined_column_count": 25,
+  "imbalance_ratios": {
+    "target_smoking": {
+      "IR1": 1.725,
+      "IR2": 1.725
+    },
+    "target_tartar": {
+      "IR1": 1.251,
+      "IR2": 1.251
+    },
+    "target_dental_caries": {
+      "IR1": 3.683,
+      "IR2": 3.683
+    }
+  },
+  "paper_imbalance_ratios": {
+    "target_smoking": {
+      "IR1": 1.725,
+      "IR2": 1.725
+    },
+    "target_tartar": {
+      "IR1": 1.251,
+      "IR2": 1.251
+    },
+    "target_dental_caries": {
+      "IR1": 3.683,
+      "IR2": 3.683
+    }
+  },
+  "target_class_counts": {
+    "target_smoking": {
+      "0": 28200,
+      "1": 16352
+    },
+    "target_tartar": {
+      "Y": 24761,
+      "N": 19791
+    },
+    "target_dental_caries": {
+      "0": 35039,
+      "1": 9513
+    }
+  }
+}

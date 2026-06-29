@@ -1,0 +1,80 @@
+{
+  "random_state": 42,
+  "stratified": false,
+  "n_total": 45194,
+  "sizes": {
+    "train": 100,
+    "test": 1000,
+    "pool": 44094
+  },
+  "target_distribution": {
+    "train": {
+      "target_income": {
+        "<=50K": 76,
+        ">50K": 24
+      },
+      "target_marital_status": {
+        "Divorced": 16,
+        "Married-civ-spouse": 48,
+        "Never-married": 30,
+        "Separated": 4,
+        "Widowed": 2
+      },
+      "target_workclass": {
+        "Federal-gov": 3,
+        "Local-gov": 9,
+        "Private": 70,
+        "Self-emp-inc": 3,
+        "Self-emp-not-inc": 8,
+        "State-gov": 7
+      }
+    },
+    "test": {
+      "target_income": {
+        "<=50K": 756,
+        ">50K": 244
+      },
+      "target_marital_status": {
+        "Divorced": 127,
+        "Married-AF-spouse": 1,
+        "Married-civ-spouse": 490,
+        "Married-spouse-absent": 11,
+        "Never-married": 313,
+        "Separated": 31,
+        "Widowed": 27
+      },
+      "target_workclass": {
+        "Federal-gov": 28,
+        "Local-gov": 68,
+        "Private": 763,
+        "Self-emp-inc": 29,
+        "Self-emp-not-inc": 76,
+        "State-gov": 36
+      }
+    },
+    "pool": {
+      "target_income": {
+        "<=50K": 33156,
+        ">50K": 10938
+      },
+      "target_marital_status": {
+        "Divorced": 6151,
+        "Married-AF-spouse": 31,
+        "Married-civ-spouse": 20510,
+        "Married-spouse-absent": 541,
+        "Never-married": 14237,
+        "Separated": 1376,
+        "Widowed": 1248
+      },
+      "target_workclass": {
+        "Federal-gov": 1375,
+        "Local-gov": 3023,
+        "Private": 32448,
+        "Self-emp-inc": 1613,
+        "Self-emp-not-inc": 3711,
+        "State-gov": 1903,
+        "Without-pay": 21
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "row_counts": {
+    "raw": 48842,
+    "after_dedup": 48813,
+    "after_dropna": 45194,
+    "after_income_normalize": 45194
+  },
+  "paper_row_count": 45194,
+  "row_count_delta_vs_paper": 0,
+  "feature_count": 12,
+  "paper_feature_count": 12,
+  "paper_total_column_count": 15,
+  "combined_column_count": 15,
+  "imbalance_ratios": {
+    "target_income": {
+      "IR1": 3.033,
+      "IR2": 3.033
+    },
+    "target_marital_status": {
+      "IR1": 122.011,
+      "IR2": 657.75
+    },
+    "target_workclass": {
+      "IR1": 277.553,
+      "IR2": 1584.81
+    }
+  },
+  "paper_imbalance_ratios": {
+    "target_income": {
+      "IR1": 3.033,
+      "IR2": 3.033
+    },
+    "target_marital_status": {
+      "IR1": 122.011,
+      "IR2": 657.75
+    },
+    "target_workclass": {
+      "IR1": 277.553,
+      "IR2": 1584.81
+    }
+  },
+  "target_class_counts": {
+    "target_income": {
+      "<=50K": 33988,
+      ">50K": 11206
+    },
+    "target_marital_status": {
+      "Married-civ-spouse": 21048,
+      "Never-married": 14580,
+      "Divorced": 6294,
+      "Separated": 1411,
+      "Widowed": 1277,
+      "Married-spouse-absent": 552,
+      "Married-AF-spouse": 32
+    },
+    "target_workclass": {
+      "Private": 33281,
+      "Self-emp-not-inc": 3795,
+      "Local-gov": 3100,
+      "State-gov": 1946,
+      "Self-emp-inc": 1645,
+      "Federal-gov": 1406,
+      "Without-pay": 21
+    }
+  }
+}

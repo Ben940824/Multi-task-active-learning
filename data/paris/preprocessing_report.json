@@ -1,0 +1,59 @@
+{
+  "row_counts": {
+    "raw": 10000,
+    "after_dedup": 10000,
+    "final": 10000
+  },
+  "paper_row_count": 10000,
+  "row_count_delta_vs_paper": 0,
+  "feature_count": 13,
+  "paper_feature_count": 13,
+  "paper_total_column_count": 17,
+  "combined_column_count": 16,
+  "imbalance_ratios": {
+    "target_category": {
+      "IR1": 6.905,
+      "IR2": 6.905
+    },
+    "target_new_built": {
+      "IR1": 1.004,
+      "IR2": 1.004
+    },
+    "target_storage_room": {
+      "IR1": 1.012,
+      "IR2": 1.012
+    }
+  },
+  "paper_imbalance_ratios": {
+    "target_category": {
+      "IR1": 6.905,
+      "IR2": 6.905
+    },
+    "target_new_built": {
+      "IR1": 1.004,
+      "IR2": 1.004
+    },
+    "target_storage_room": {
+      "IR1": 1.012,
+      "IR2": 1.012
+    }
+  },
+  "target_class_counts": {
+    "target_category": {
+      "Basic": 8735,
+      "Luxury": 1265
+    },
+    "target_new_built": {
+      "0": 5009,
+      "1": 4991
+    },
+    "target_storage_room": {
+      "1": 5030,
+      "0": 4970
+    }
+  },
+  "paper_schema_feature_count": 14,
+  "leakage_suppressed_columns": [
+    "made"
+  ]
+}
